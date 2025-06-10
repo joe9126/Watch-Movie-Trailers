@@ -11,7 +11,7 @@
             spaceBetween: 2,
           },
           600: {
-            slidesPerView: 6,
+            slidesPerView: 4,
             spaceBetween: 2,
           },
         }"
@@ -22,7 +22,7 @@
           disableOnInteraction: true,
         }"
         :pagination="false"
-        class="mySwiper"
+        :class="`mySwiper`"
         v-if="trending.length > 1"
       >
         <swiper-slide v-for="movie in trending" :key="movie.id">
@@ -80,6 +80,8 @@ onMounted(getTrendingMovies);
   .mySwiper {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: auto;
   }
   h2 {
     text-align: left;
@@ -91,12 +93,18 @@ onMounted(getTrendingMovies);
       color: #fff;
     }
   }
+  swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
   .trending-slider {
     display: block;
   }
 }
 .poster-img {
-  width: 250px;
+  width: 230px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

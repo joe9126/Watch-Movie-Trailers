@@ -76,13 +76,13 @@ h2 {
   display: flex;
   gap: 1rem;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 }
 .movie_poster {
-  width: 250px;
+  width: 200px;
   height: auto;
   border-radius: 8px;
   margin-right: 20px;

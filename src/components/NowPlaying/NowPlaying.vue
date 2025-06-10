@@ -99,7 +99,7 @@ export default {
 .slide-caption {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 600px;
   display: flex;
   overflow: hidden;
 }

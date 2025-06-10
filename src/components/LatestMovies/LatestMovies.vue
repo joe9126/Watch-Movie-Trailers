@@ -38,15 +38,15 @@ onMounted(getLatestMovies);
     <div class="loading" v-if="isLoading"><p>Loading...</p></div>
     <div class="latest_container" v-if="latestMovies">
       <div class="latest_movies" v-for="movie in latestMovies" :key="movie.id">
-        <router-link :to="/movie/ + `${movie.id}`">
-          <div class="movie_container">
+        <div class="movie_container">
+          <router-link :to="/movie/ + `${movie.id}`">
             <img
               class="movie_poster"
               :src="`https://image.tmdb.org/t/p/w1280/${movie.poster_path}`"
               :alt="movie.title"
             />
-          </div>
-        </router-link>
+          </router-link>
+        </div>
       </div>
     </div>
     <div v-else>
@@ -79,13 +79,13 @@ h2 {
   display: flex;
   gap: 1rem;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 }
 .movie_poster {
-  width: 250px;
+  width: 200px;
   height: auto;
   border-radius: 8px;
   margin-right: 20px;
